@@ -7,3 +7,12 @@ function checkScope() {
   console.log('Function scope i is: ', i);
   return i;
 }
+function checkScope() {
+  let i = 'function scope';
+  if (i === 'block scope') {
+    i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
