@@ -7,4 +7,3 @@ const myAdverb = "quickly";
 const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb; // Change this line
 console.log(wordBlanks)
 // Only change code above this line
-
