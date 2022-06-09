@@ -8,7 +8,9 @@ Penguin.prototype.constructor = Penguin;
 
 // Only change code below this line
 
-
+Penguin.prototype.fly = function () { 
+  return "Alas, this is a fightless bird"; 
+};
 
 // Only change code above this line
 
