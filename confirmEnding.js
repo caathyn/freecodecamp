@@ -1,5 +1,5 @@
 function confirmEnding(str, target) {
-  let result = str.substr(-target.length)
+  let result = str.slice(-target.length)
   if (result === target) {
     return true;
   }
