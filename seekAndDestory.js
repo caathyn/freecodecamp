@@ -1,5 +1,6 @@
 function destroyer(arr) {
   const argsArray = Array.from(arguments).slice(1);
+
   for(let i = 0; i < arr.length; i++) {
     for (let j = 0; j < argsArray.length; j++) {
       if(arr[i] === argsArray[j]) {
@@ -8,6 +9,7 @@ function destroyer(arr) {
 
     }
   }
+
   return arr.filter(Boolean);
 }
 
