@@ -1,10 +1,15 @@
 function whatIsInAName(collection, source) {
-  const arr = [];
-  // Only change code below this line
+  const sourceKeys = Object.keys(source) 
+  return collection.filter(charObj => {
+      for (let i = 0; i < sourceKeys.length; i++) {
+        const key = sourceKeys[i];
 
-
-  // Only change code above this line
-  return arr;
+        if (charObj[key] !== source[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 })) 
