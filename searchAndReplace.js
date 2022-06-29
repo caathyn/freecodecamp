@@ -1,5 +1,10 @@
 function myReplace(str, before, after) {
-  return str;
+  if(before[0] === before[0].toUpperCase()) {
+    after = after.replace(after[0], after[0].toUpperCase());
+  } else {
+    after = after.replace(after[0], after[0].toLowerCase());
+  }
+  return str.replace(before, after);
 }
 
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+console.log(myReplace("I think we should look up there", "up", "Down"));
