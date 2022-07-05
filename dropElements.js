@@ -1,8 +1,11 @@
 function dropElements(arr, func) {
-  while(!func(arr[0]) && arr.length > 0) {
-    arr.shift();
+  let emptyArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (func(arr[i])) {
+      return arr.slice(i)
+    }
   }
-  return arr;
+  return emptyArray;
 }
 
-console.log(dropElements([1, 2, 3], function(n) {return n < 3; }));
+console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
