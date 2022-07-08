@@ -13,16 +13,18 @@ function convertToRoman(num) {
     V: 5, 
     IV: 4,
     I: 1
-  }
+  };
 
   let result = "";
+
   for (let key in romanToNum) {
     while (num >= romanToNum[key]) {
       result += key;
       num -= romanToNum[key];
     }
   }
- return result;
+
+  return result;
 }
 
 console.log(convertToRoman(36));
