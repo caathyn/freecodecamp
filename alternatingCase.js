@@ -8,3 +8,6 @@ String.prototype.toAlternatingCase = function () {
       }
   }).join('')
 }
+
+console.log("hello world".toAlternatingCase());
+console.log("HELLO WORLD".toAlternatingCase());
